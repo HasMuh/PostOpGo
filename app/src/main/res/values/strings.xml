@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PostOpGo</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="rhinoplasty">Rhinoplasty</string>
+    <string name="daily_care">Daily Care</string>
+    <string name="meds">Medications</string>
+    <string name="restrictions">Restrictions</string>
+    <string name="faq">Frequently Asked Questions</string>
+    <string name="contactphys">Contact Your Physician</string>
+    <string name="pwPrompt">Password</string>
+    <string name="login">Login</string>
+</resources>

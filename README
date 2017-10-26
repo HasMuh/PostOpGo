@@ -1,0 +1,7 @@
+Quick intro to GitHub on Andorid Studio:
+-Download the GH desktop app on your computer
+-On the desktop app, click add a repository (the plus button) 
+-Choose clone and select PostOpGo
+-Now in Android Studio go to New->Project from Version Control->GitHub
+-Pick PostOpGo
+-From now on

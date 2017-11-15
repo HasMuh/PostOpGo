@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void toRestrictions(View view)
     {
-
+        Intent intent = new Intent(this, RestRhino.class);
+        startActivity(intent);
     }
 
     public void toMeds(View view)

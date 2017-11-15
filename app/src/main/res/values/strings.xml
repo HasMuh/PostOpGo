@@ -12,4 +12,5 @@
     <string name="login">Login</string>
     <string name="rhino_DC">Rhinoplasty: Daily Care</string>
     <string name="rest_Rhino">Rhinoplasty: Restrictions</string>
+    <string name="meds_Rhino">Rhinoplasty: Medications</string>
 </resources>

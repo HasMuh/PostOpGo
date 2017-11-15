@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void toMeds(View view)
     {
-
+        Intent intent = new Intent(this, RhinoMeds.class);
+        startActivity(intent);
     }
 }
 

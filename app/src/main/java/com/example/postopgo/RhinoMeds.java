@@ -8,13 +8,13 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class RestRhino extends AppCompatActivity {
+public class RhinoMeds extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rest_rhino);
-        TextView view = (TextView)findViewById(R.id.fillableRestRhino);
+        setContentView(R.layout.activity_rhino_meds);
+        TextView view = (TextView)findViewById(R.id.fillable_Meds);
         String line = "";
 
         try

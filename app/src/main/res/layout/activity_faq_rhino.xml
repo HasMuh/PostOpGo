@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.example.postopgo.FaqRhino">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
         android:text="Rhinoplasty: Frequently Asked Questions"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorPrimary"
         android:textSize="17sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -27,6 +27,7 @@
         android:fillViewport="true"
         android:maxLines="500"
         android:scrollbars="vertical"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

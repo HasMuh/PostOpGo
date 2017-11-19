@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 
 //18,103,153 RGB
+//Should be first screen to open, contains login
 public class Welcome_Screen extends AppCompatActivity {
 
     @Override

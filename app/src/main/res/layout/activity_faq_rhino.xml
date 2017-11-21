@@ -19,11 +19,12 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <WebView
         android:id="@+id/fillable"
         android:layout_width="match_parent"
         android:layout_height="800dp"
         android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
         android:fillViewport="true"
         android:maxLines="5000"
         android:scrollbars="vertical"

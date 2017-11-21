@@ -1,9 +1,11 @@
 package com.example.postopgo;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -17,18 +19,8 @@ public class FaqRhino extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq_rhino);
-        TextView view = (TextView)findViewById(R.id.fillable);
-        final InputStream stream = getResources().openRawResource(R.raw.fillerhtml);
-        final String text;
-        try
-        {
-            text = IOUtils.toString(stream, "UTF-8");
-        }
-        catch(IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        view.setText(Html.fromHtml(text));
-        view.setMovementMethod(new ScrollingMovementMethod());
+        WebView view = (WebView)findViewById(R.id.fillable);
+        view.setBackgroundColor(Color.TRANSPARENT);
+        view.loadUrl("file:///android_asset/fillerhtml.html");
     }
 }

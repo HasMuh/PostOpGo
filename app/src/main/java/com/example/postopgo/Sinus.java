@@ -24,7 +24,7 @@ public class Sinus extends AppCompatActivity {
 
     public void toDailyCare(View view)
     {
-        Intent intent = new Intent(this, DCRhino.class);
+        Intent intent = new Intent(this, DCSinus.class);
         startActivity(intent);
     }
 

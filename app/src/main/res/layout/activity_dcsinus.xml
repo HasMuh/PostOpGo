@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/rhino_DC"
+        android:text="@string/sinusDC"
         android:textColor="@color/colorPrimary"
         android:textSize="17sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <WebView
-        android:id="@+id/fillableDC"
+        android:id="@+id/fillableSin"
         android:layout_width="match_parent"
         android:layout_height="441dp"
         android:fillViewport="true"

@@ -18,7 +18,7 @@ public class Sinus extends AppCompatActivity {
     }
     public void toFAQ(View view)
     {
-        Intent intent = new Intent(this, FaqRhino.class);
+        Intent intent = new Intent(this, FaqSinus.class);
         startActivity(intent);
     }
 

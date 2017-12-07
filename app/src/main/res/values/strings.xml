@@ -15,4 +15,8 @@
     <string name="meds_Rhino">Rhinoplasty: Medications</string>
     <string name="Sinus">Sinus Surgery</string>
     <string name="sinusDC">Sinus Surgery: Daily Care</string>
+    <string name="sinus_faq">Sinus Surgery: Frequently Asked Questions</string>
+    <string name="restSinus">Sinus Surgery: Restrictions</string>
+    <string name="medsSin">Sinus Surgery: Medications</string>
+    <string name="faq_Rhino">Rhinoplasty: Frequently Asked Questions</string>
 </resources>

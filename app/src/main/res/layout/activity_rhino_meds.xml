@@ -19,15 +19,18 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <WebView
         android:id="@+id/fillable_Meds"
         android:layout_width="match_parent"
-        android:layout_height="441dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="40dp"
         android:fillViewport="true"
         android:maxLines="500"
         android:scrollbars="vertical"
         android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/meds_Rhino"

@@ -22,7 +22,7 @@
     <WebView
         android:id="@+id/fillableSin"
         android:layout_width="match_parent"
-        android:layout_height="441dp"
+        android:layout_height="match_parent"
         android:fillViewport="true"
         android:layout_marginTop="40dp"
         android:maxLines="5000"

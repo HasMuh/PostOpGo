@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.example.postopgo.RestRhino">
+    tools:context="com.example.postopgo.DCRhino">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/rest_Rhino"
+        android:text="@string/restSinus"
         android:textColor="@color/colorPrimary"
         android:textSize="17sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,12 +20,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <WebView
-        android:id="@+id/fillableRestRhino"
+        android:id="@+id/fillableRestSin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:layout_marginTop="40dp"
-        android:maxLines="500"
+        android:maxLines="5000"
         android:scrollbars="vertical"
         android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -34,5 +34,4 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1" />
-
 </android.support.constraint.ConstraintLayout>

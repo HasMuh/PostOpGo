@@ -19,4 +19,6 @@
     <string name="restSinus">Sinus Surgery: Restrictions</string>
     <string name="medsSin">Sinus Surgery: Medications</string>
     <string name="faq_Rhino">Rhinoplasty: Frequently Asked Questions</string>
+    <string name="doc_entry">"   AS A DOCTOR   "</string>
+    <string name="patient_entry">"   AS A PATIENT   "</string>
 </resources>

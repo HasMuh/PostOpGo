@@ -9,7 +9,8 @@ import android.widget.Toast;
 
 
 //Contains login
-public class Welcome_Screen extends AppCompatActivity {
+public class
+Welcome_Screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

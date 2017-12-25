@@ -13,6 +13,6 @@ public class SinusMeds extends AppCompatActivity {
         setContentView(R.layout.activity_sinus_meds);
         WebView view = (WebView)findViewById(R.id.fillableMedsSin);
         view.setBackgroundColor(Color.TRANSPARENT);
-        view.loadUrl("file:///android_asset/fillerhtml.html");
+        view.loadUrl("file:///android_asset/Sinus Surgery_Medications");
     }
 }

@@ -2,7 +2,7 @@
     <string name="app_name">PostOpGo</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
-    <string name="rhinoplasty">Rhinoplasty</string>
+    <string name="rhinoplasty">"   Rhinoplasty"</string>
     <string name="daily_care">Daily Care</string>
     <string name="meds">Medications</string>
     <string name="restrictions">Restrictions</string>
@@ -21,4 +21,5 @@
     <string name="faq_Rhino">Rhinoplasty: Frequently Asked Questions</string>
     <string name="doc_entry">"   AS A DOCTOR   "</string>
     <string name="patient_entry">"   AS A PATIENT   "</string>
+    <string name="auth_failed">Login Unsuccessful</string>
 </resources>

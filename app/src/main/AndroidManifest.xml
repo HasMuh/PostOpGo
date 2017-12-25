@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -23,13 +23,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".Welcome_Screen">
-            <intent-filter>
-                /**Makes this the first activity to launch*/
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name=".Welcome_Screen"
+            android:parentActivityName=".IAmA">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".IAmA" />
         </activity>
         <activity android:name=".Sinus" />
         <activity
@@ -63,9 +62,9 @@
         <activity
             android:name=".FaqSinus"
             android:parentActivityName=".Sinus">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".Sinus" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Sinus" />
         </activity>
         <activity
             android:name=".RestSinus"
@@ -81,6 +80,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Sinus" />
         </activity>
+        <activity android:name=".IAmA">
+            <intent-filter>
+                /**Makes this the first activity to launch*/
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Doc_Screen" />
+        <activity android:name=".Doc_Menu"></activity>
     </application>
 
 </manifest>

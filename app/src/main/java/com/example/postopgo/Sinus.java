@@ -46,13 +46,13 @@ public class Sinus extends AppCompatActivity {
 
     public void toRestrictions(View view)
     {
-        Intent intent = new Intent(this, RestRhino.class);
+        Intent intent = new Intent(this, RestSinus.class);
         startActivity(intent);
     }
 
     public void toMeds(View view)
     {
-        Intent intent = new Intent(this, RhinoMeds.class);
+        Intent intent = new Intent(this, SinusMeds.class);
         startActivity(intent);
     }
 }

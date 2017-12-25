@@ -13,6 +13,6 @@ public class DCSinus extends AppCompatActivity {
         setContentView(R.layout.activity_dcsinus);
         WebView view = (WebView)findViewById(R.id.fillableSin);
         view.setBackgroundColor(Color.TRANSPARENT);
-        view.loadUrl("file:///android_asset/Filler2.html");
+        view.loadUrl("file:///android_asset/Sinus Surgery_DailyCare");
     }
 }

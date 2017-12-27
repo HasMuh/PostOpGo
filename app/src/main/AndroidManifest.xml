@@ -89,7 +89,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Doc_Screen" />
-        <activity android:name=".Doc_Menu"></activity>
+        <activity android:name=".Doc_Menu" />
+        <activity android:name=".Doc_Registry" />
+        <activity android:name=".Doc_Forgot"></activity>
     </application>
 
 </manifest>

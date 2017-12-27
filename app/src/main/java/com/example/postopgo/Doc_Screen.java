@@ -32,11 +32,11 @@ public class Doc_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         auth = FirebaseAuth.getInstance();
 
-        if(auth.getCurrentUser() != null)
+        /**if(auth.getCurrentUser() != null)
         {
             startActivity(new Intent(Doc_Screen.this, Doc_Menu.class));
             finish();
-        }
+        }*/
 
         setContentView(R.layout.activity_doc__screen);
         signIn = (Button) findViewById(R.id.Login);
@@ -83,5 +83,17 @@ public class Doc_Screen extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    public void toRegister(View view)
+    {
+        Intent intent = new Intent(this, Doc_Registry.class);
+        startActivity(intent);
+    }
+
+    public void toForgot(View view)
+    {
+        Intent intent = new Intent(this, Doc_Forgot.class);
+        startActivity(intent);
     }
 }

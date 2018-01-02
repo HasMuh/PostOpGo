@@ -3,24 +3,22 @@ package com.example.postopgo;
 
 public class User
 {
-    private String email;
-    private String phone;
+    public String email;
+    public String phone;
+    public String name;
 
     public User() {}
 
-    public User(String em, String pn)
+    public User(String ln, String em, String pn)
     {
         email = em;
         phone = pn;
+        name = ln;
     }
 
-    public String getEmail()
-    {
-        return email;
-    }
+    public String getEmail() {return email;}
 
-    public String getPhone()
-    {
-        return phone;
-    }
+    public String getPhone() {return phone;}
+
+    public String getName() {return name;};
 }

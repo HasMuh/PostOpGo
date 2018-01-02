@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Doc_Registry extends AppCompatActivity {
 
-    private EditText pw, pwVerify, email, phone;
+    private EditText pw, pwVerify, email, phone, name;
     private Button reg;
     private FirebaseAuth auth;
     private DatabaseReference mDatabase;
@@ -34,6 +34,7 @@ public class Doc_Registry extends AppCompatActivity {
         pw = (EditText) findViewById(R.id.pwReg);
         pwVerify = (EditText) findViewById(R.id.verifyReg);
         phone = (EditText) findViewById(R.id.phoneNumber);
+        name = (EditText) findViewById(R.id.nameDoc);
         reg = (Button) findViewById(R.id.confirmReg);
 
         reg.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +45,13 @@ public class Doc_Registry extends AppCompatActivity {
                 String password = pw.getText().toString().trim();
                 String passwordCheck = pwVerify.getText().toString().trim();
                 final String phoneNumber = phone.getText().toString().trim();
+                final String lastName = name.getText().toString().trim();
 
+                if (TextUtils.isEmpty(lastName))
+                {
+                    Toast.makeText(getApplicationContext(), "Enter Last Name", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (TextUtils.isEmpty(phoneNumber))
                 {
                     Toast.makeText(getApplicationContext(), "Enter phone number", Toast.LENGTH_SHORT).show();
@@ -83,7 +90,7 @@ public class Doc_Registry extends AppCompatActivity {
                         }
                         else
                         {
-                            User user = new User(mail, phoneNumber);
+                            User user = new User(lastName, mail, phoneNumber);
                             String userId = auth.getUid();
                             mDatabase.child(userId).setValue(user);
                             startActivity(new Intent(Doc_Registry.this, Doc_Screen.class));

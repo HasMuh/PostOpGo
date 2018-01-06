@@ -46,7 +46,7 @@ public class PhysInf extends AppCompatActivity
 
         String userId = auth.getUid();
 
-        mDatabase.child(userId).addValueEventListener(new ValueEventListener()
+        mDatabase.child("Physicians").child(userId).child("info").addValueEventListener(new ValueEventListener()
         {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)
@@ -54,7 +54,7 @@ public class PhysInf extends AppCompatActivity
 
                 User user = dataSnapshot.getValue(User.class);
                 String nameText = user.getName();
-                String phText = user.getPhone();
+                String phText = user.getPhoneNumber();
                 String emailText = user.getEmail();
 
                 emailEntry.setText(emailText);
@@ -107,7 +107,7 @@ public class PhysInf extends AppCompatActivity
                         }
                     }
                 });
-                mDatabase.child(userId).setValue(new User(lastName, mail, phoneNumber)).addOnCompleteListener(new OnCompleteListener<Void>()
+                mDatabase.child("Physicians").child(userId).child("info").setValue(new User(lastName, mail, phoneNumber)).addOnCompleteListener(new OnCompleteListener<Void>()
                 {
                     @Override
                     public void onComplete(@NonNull Task<Void> task)

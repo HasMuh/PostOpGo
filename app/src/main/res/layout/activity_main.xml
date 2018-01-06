@@ -28,7 +28,7 @@
     <TextView
         android:id="@+id/contact"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:onClick="toContact"
         android:text="@string/contactphys"
@@ -45,7 +45,7 @@
     <TextView
         android:id="@+id/dailycare"
         android:layout_width="wrap_content"
-        android:layout_height="27dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:onClick="toDailyCare"
         android:text="@string/daily_care"
@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rhinoplasty"
+        app:layout_constraintTop_toBottomOf="@+id/MainTitle"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1" />
@@ -62,7 +62,7 @@
     <TextView
         android:id="@+id/Restrictions"
         android:layout_width="wrap_content"
-        android:layout_height="28dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:onClick="toRestrictions"
         android:text="@string/restrictions"
@@ -78,11 +78,10 @@
         tools:layout_constraintTop_creator="1" />
 
     <TextView
-        android:id="@+id/rhinoplasty"
-        android:layout_width="185dp"
-        android:layout_height="55dp"
+        android:id="@+id/MainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="@string/rhinoplasty"
         android:textColor="@color/colorPrimary"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"

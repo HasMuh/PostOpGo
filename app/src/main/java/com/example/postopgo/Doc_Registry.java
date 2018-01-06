@@ -92,7 +92,7 @@ public class Doc_Registry extends AppCompatActivity {
                         {
                             User user = new User(lastName, mail, phoneNumber);
                             String userId = auth.getUid();
-                            mDatabase.child(userId).setValue(user);
+                            mDatabase.child("Physicians").child(userId).child("info").setValue(user);
                             startActivity(new Intent(Doc_Registry.this, Doc_Screen.class));
                             finish();
                         }

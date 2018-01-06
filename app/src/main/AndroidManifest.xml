@@ -7,81 +7,95 @@
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo"
-        android:supportsRtl="true"
         android:screenOrientation="portrait"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:parentActivityName=".Welcome_Screen">
+            android:parentActivityName=".Welcome_Screen"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".FaqRhino"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Welcome_Screen"
-            android:parentActivityName=".IAmA">
+            android:parentActivityName=".IAmA"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".IAmA" />
         </activity>
-        <activity android:name=".Sinus" />
+        <activity
+            android:name=".Sinus"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DCRhino"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".RestRhino"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".RhinoMeds"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".DCSinus"
-            android:parentActivityName=".Sinus">
+            android:parentActivityName=".Sinus"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Sinus" />
         </activity>
         <activity
             android:name=".FaqSinus"
-            android:parentActivityName=".Sinus">
+            android:parentActivityName=".Sinus"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Sinus" />
         </activity>
         <activity
             android:name=".RestSinus"
-            android:parentActivityName=".Sinus">
+            android:parentActivityName=".Sinus"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Sinus" />
         </activity>
         <activity
             android:name=".SinusMeds"
-            android:parentActivityName=".Sinus">
+            android:parentActivityName=".Sinus"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Sinus" />
         </activity>
-        <activity android:name=".IAmA">
+        <activity
+            android:name=".IAmA"
+            android:screenOrientation="portrait">
             <intent-filter>
                 /**Makes this the first activity to launch*/
                 <action android:name="android.intent.action.MAIN" />
@@ -89,12 +103,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Doc_Screen" />
-        <activity android:name=".Doc_Menu" />
-        <activity android:name=".Doc_Registry" />
-        <activity android:name=".Doc_Forgot" />
-        <activity android:name=".PhysInf" />
-        <activity android:name=".NewOp"></activity>
+        <activity
+            android:name=".Doc_Screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc_Menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc_Registry"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc_Forgot"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PhysInf"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewOp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageOps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageOpDisamb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditOpInfo"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Advice"></activity>
     </application>
 
 </manifest>

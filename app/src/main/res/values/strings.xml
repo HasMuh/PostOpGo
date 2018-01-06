@@ -23,4 +23,5 @@
     <string name="patient_entry">PATIENT</string>
     <string name="auth_failed">Login Unsuccessful</string>
     <string name="reg_title">New User Registry</string>
+    <string name="title_activity_edit_op_info">EditOpInfo</string>
 </resources>

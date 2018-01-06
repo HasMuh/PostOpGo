@@ -4,7 +4,7 @@ package com.example.postopgo;
 public class User
 {
     public String email;
-    public String phone;
+    public String phoneNumber;
     public String name;
 
     public User() {}
@@ -12,13 +12,13 @@ public class User
     public User(String ln, String em, String pn)
     {
         email = em;
-        phone = pn;
+        phoneNumber = pn;
         name = ln;
     }
 
     public String getEmail() {return email;}
 
-    public String getPhone() {return phone;}
+    public String getPhoneNumber() {return phoneNumber;}
 
     public String getName() {return name;};
 }

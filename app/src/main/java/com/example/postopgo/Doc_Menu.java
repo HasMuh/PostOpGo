@@ -28,7 +28,7 @@ public class Doc_Menu extends AppCompatActivity
         welcome = findViewById(R.id.titleDocMenu);
         String userId = auth.getUid();
 
-        mDatabase.child(userId).addValueEventListener(new ValueEventListener()
+        mDatabase.child("Physicians").child(userId).child("info").addValueEventListener(new ValueEventListener()
         {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)
@@ -37,7 +37,7 @@ public class Doc_Menu extends AppCompatActivity
                 user = dataSnapshot.getValue(User.class);
                 String text = "Welcome, Dr. " + user.getName();
                 welcome.setText(text);
-                Log.d(TAG, "User name: " + user.getName() + ", email " + user.getEmail());
+                //Log.d(TAG, "User name: " + user.getName() + ", email " + user.getEmail());
             }
 
             @Override
@@ -58,6 +58,12 @@ public class Doc_Menu extends AppCompatActivity
     public void toNewOp(View view)
     {
         Intent intent = new Intent(Doc_Menu.this, NewOp.class);
+        startActivity(intent);
+    }
+
+    public void toManageOps(View view)
+    {
+        Intent intent = new Intent(Doc_Menu.this, ManageOps.class);
         startActivity(intent);
     }
 }

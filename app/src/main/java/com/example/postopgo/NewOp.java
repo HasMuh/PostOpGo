@@ -59,7 +59,8 @@ public class NewOp extends AppCompatActivity
                 }
 
                 String UserId = auth.getUid();
-                mDatabase.child(UserId).child(passcode).child("Operation Name").setValue(opName);
+                mDatabase.child("Physicians").child(UserId).child("operation_codes").child(passcode).child("name").setValue(opName);
+                mDatabase.child("allCodes").child(passcode).child("physicianId").setValue(UserId);
                 String text = opName + " is now available in \"Manage Operations\"";
                 Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(NewOp.this, Doc_Menu.class));

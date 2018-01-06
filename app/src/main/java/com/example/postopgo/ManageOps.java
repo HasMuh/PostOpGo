@@ -14,55 +14,57 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-
-//Contains login
-public class Welcome_Screen extends AppCompatActivity
+public class ManageOps extends AppCompatActivity
 {
+
     private DatabaseReference mDatabase;
     private FirebaseAuth auth;
-    private EditText passcodeEntry;
-    private Button conf;
+    private EditText opNameEntry;
+    private Button confOp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome__screen);
+        setContentView(R.layout.activity_manage_ops);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         auth = FirebaseAuth.getInstance();
-        passcodeEntry = (EditText) findViewById(R.id.editText);
-        conf = (Button) findViewById(R.id.button);
+        opNameEntry = (EditText) findViewById(R.id.ManageOpEntry);
+        confOp = (Button) findViewById(R.id.ConfManageOps);
 
-        conf.setOnClickListener(new View.OnClickListener() {
+        confOp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                final String passcode = passcodeEntry.getText().toString().trim();
-                if (TextUtils.isEmpty(passcode))
+                final String opName = opNameEntry.getText().toString().trim();
+                if (TextUtils.isEmpty(opName))
                 {
                     Toast.makeText(getApplicationContext(), "Enter Passcode", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                mDatabase.child("allCodes").child(passcode).addListenerForSingleValueEvent(new ValueEventListener() {
+                String userId = auth.getUid();
+                mDatabase.child("Physicians").child(userId).child("operation_codes").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot)
                     {
-                        if(dataSnapshot.exists())
+                        for (DataSnapshot d : dataSnapshot.getChildren())
                         {
-                            String userId = (String) dataSnapshot.child("physicianId").getValue();
-                            Intent i = new Intent(Welcome_Screen.this, MainActivity.class);
-                            i.putExtra("CODE", passcode);
-                            i.putExtra("UID", userId);
-                            startActivity(i);
-                        }
-                        else
-                        {
-                            Toast.makeText(getApplicationContext(), "Invalid passcode", Toast.LENGTH_SHORT).show();
+                            if(d.exists())
+                            {
+                                if (((String)d.child("name").getValue()).equalsIgnoreCase(opName))
+                                {
+                                    String name = d.getKey();
+                                    Intent i = new Intent(ManageOps.this, ManageOpDisamb.class);
+                                    i.putExtra("CODE",name);
+                                    startActivity(i);
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "Operation not found", Toast.LENGTH_SHORT).show();
+                                }
+                            }
                         }
                     }
 

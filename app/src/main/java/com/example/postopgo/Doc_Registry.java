@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Doc_Registry extends AppCompatActivity {
 
-    private EditText pw, pwVerify, email, phone, name;
+    private EditText pw, pwVerify, email, phone, name, office;
     private Button reg;
     private FirebaseAuth auth;
     private DatabaseReference mDatabase;
@@ -36,6 +36,7 @@ public class Doc_Registry extends AppCompatActivity {
         phone = (EditText) findViewById(R.id.phoneNumber);
         name = (EditText) findViewById(R.id.nameDoc);
         reg = (Button) findViewById(R.id.confirmReg);
+        office = (EditText) findViewById(R.id.Office);
 
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +47,7 @@ public class Doc_Registry extends AppCompatActivity {
                 String passwordCheck = pwVerify.getText().toString().trim();
                 final String phoneNumber = phone.getText().toString().trim();
                 final String lastName = name.getText().toString().trim();
+                final String officeName = office.getText().toString().trim();
 
                 if (TextUtils.isEmpty(lastName))
                 {
@@ -73,6 +75,12 @@ public class Doc_Registry extends AppCompatActivity {
                     return;
                 }
 
+                if(TextUtils.isEmpty(officeName))
+                {
+                    Toast.makeText(getApplicationContext(), "Enter office name", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if (!(password.equals(passwordCheck)))
                 {
                     Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
@@ -93,6 +101,7 @@ public class Doc_Registry extends AppCompatActivity {
                             User user = new User(lastName, mail, phoneNumber);
                             String userId = auth.getUid();
                             mDatabase.child("Physicians").child(userId).child("info").setValue(user);
+                            mDatabase.child("Physicians").child(userId).child("info").child("practiceName").setValue(officeName);
                             startActivity(new Intent(Doc_Registry.this, Doc_Screen.class));
                             finish();
                         }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.postopgo">
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <supports-screens android:compatibleWidthLimitDp="320" />
 
     <application
         android:allowBackup="true"
@@ -12,20 +14,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:parentActivityName=".Welcome_Screen"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".FaqRhino"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Welcome_Screen"
             android:parentActivityName=".IAmA"
@@ -33,65 +22,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".IAmA" />
-        </activity>
-        <activity
-            android:name=".Sinus"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".DCRhino"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".RestRhino"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".RhinoMeds"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".DCSinus"
-            android:parentActivityName=".Sinus"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Sinus" />
-        </activity>
-        <activity
-            android:name=".FaqSinus"
-            android:parentActivityName=".Sinus"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Sinus" />
-        </activity>
-        <activity
-            android:name=".RestSinus"
-            android:parentActivityName=".Sinus"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Sinus" />
-        </activity>
-        <activity
-            android:name=".SinusMeds"
-            android:parentActivityName=".Sinus"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Sinus" />
         </activity>
         <activity
             android:name=".IAmA"
@@ -105,7 +35,12 @@
         </activity>
         <activity
             android:name=".Doc_Screen"
-            android:screenOrientation="portrait" />
+            android:parentActivityName=".IAmA"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".IAmA" />
+        </activity>
         <activity
             android:name=".Doc_Menu"
             android:screenOrientation="portrait" />
@@ -130,7 +65,10 @@
         <activity
             android:name=".EditOpInfo"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".Advice"></activity>
+        <activity
+            android:name=".Advice"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Contact"></activity>
     </application>
 
 </manifest>

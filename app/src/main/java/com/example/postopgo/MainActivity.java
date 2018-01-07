@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity
     private DatabaseReference mDatabase;
     private FirebaseAuth auth;
     private String type, code, uid;
-    private TextView title;
+    private TextView title, office;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -42,15 +42,18 @@ public class MainActivity extends AppCompatActivity
             code = extras.getString("CODE");
         }
         title = (TextView) findViewById(R.id.MainTitle);
+        office = (TextView) findViewById(R.id.OfficeNameClient);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         auth = FirebaseAuth.getInstance();
 
-        mDatabase.child("Physicians").child(uid).child("operation_codes").child(code).child("name").addValueEventListener(new ValueEventListener()
+        mDatabase.child("Physicians").child(uid).addValueEventListener(new ValueEventListener()
         {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)
             {
-                String opName = dataSnapshot.getValue(String.class);
+                String officeN = dataSnapshot.child("practiceName").getValue(String.class);
+                String opName = dataSnapshot.child("operation_codes").child(code).child("name").getValue(String.class);
+                office.setText(officeN);
                 title.setText(opName);
             }
 
@@ -60,6 +63,8 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
+
+
     }
 
     public void toFAQ(View view)
@@ -82,18 +87,10 @@ public class MainActivity extends AppCompatActivity
 
     public void toContact(View view)
     {
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-        emailIntent.setType("message/rfc822");
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"borpas@njms.rutgers.com"});
-        PackageManager packageManager = getPackageManager();
-        List<ResolveInfo> activities = packageManager.queryIntentActivities(emailIntent, 0);
-        boolean isIntentSafe = activities.size() > 0;
-
-// Start an activity if it's safe
-        if (isIntentSafe)
-        {
-            startActivity(emailIntent);
-        }
+        Intent intent = new Intent(this, Advice.class);
+        intent.putExtra("CODE", code);
+        intent.putExtra("UID", uid);
+        startActivity(intent);
     }
 
     public void toRestrictions(View view)

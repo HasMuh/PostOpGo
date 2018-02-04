@@ -5,67 +5,112 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.example.postopgo.PhysInf">
+    tools:context="com.hasan.postopgo.PhysInf">
 
-    <TextView
-        android:id="@+id/PhysInftitle"
-        android:layout_width="wrap_content"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Personal Info"
-        android:textColor="@color/colorPrimary"
-        android:textSize="32dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:fillViewport="false">
 
-    <EditText
-        android:id="@+id/NewName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:ems="10"
-        android:hint="Last Name"
-        android:inputType="textPersonName"
-        android:singleLine="true"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PhysInftitle" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/PhysInftitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Personal Info"
+                android:textColor="@color/colorPrimary"
+                android:textSize="32dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/NewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NewName" />
+            <ImageView
+                android:id="@+id/profPic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/PhysInftitle"/>
 
-    <EditText
-        android:id="@+id/NewPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Phone Number"
-        android:inputType="phone"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NewEmail" />
+            <EditText
+                android:id="@+id/NewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:ems="10"
+                android:hint="Last Name"
+                android:textColorHint="@color/colorPrimary"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profPic" />
 
-    <Button
-        android:id="@+id/NewInfConf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Update Info"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NewPhone" />
+            <EditText
+                android:id="@+id/NewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="Email"
+                android:textColorHint="@color/colorPrimary"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NewName" />
+
+            <EditText
+                android:id="@+id/NewPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textColorHint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NewEmail" />
+
+            <EditText
+                android:id="@+id/newPractice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="Practice Name"
+                android:textColorHint="@color/colorPrimary"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NewPhone" />
+
+            <Button
+                android:id="@+id/NewInfConf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Update Info"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newPractice" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

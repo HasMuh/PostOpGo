@@ -5,51 +5,67 @@
     android:layout_width="match_parent"
     android:background="@color/colorPrimaryDark"
     android:layout_height="match_parent"
-    tools:context="com.example.postopgo.Doc_Forgot">
+    tools:context="com.hasan.postopgo.Doc_Forgot">
 
-    <TextView
-        android:id="@+id/titleForg"
-        android:layout_width="wrap_content"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Password Reset"
-        android:textColor="@color/colorPrimary"
-        android:textSize="28dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:fillViewport="false">
 
-    <TextView
-        android:id="@+id/instructionsForg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Enter your email and we'll send instructions"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleForg" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/titleForg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Password Reset"
+                android:textColor="@color/colorPrimary"
+                android:textSize="28dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/emailForg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:hint="Email"
-        android:paddingLeft="100dp"
-        android:paddingRight="100dp"
-        android:singleLine="true"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructionsForg" />
+            <TextView
+                android:id="@+id/instructionsForg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Enter your email and we'll send instructions"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleForg" />
 
-    <Button
-        android:id="@+id/confirmForg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="SEND"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailForg" />
+            <EditText
+                android:id="@+id/emailForg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:hint="Email"
+                android:paddingLeft="100dp"
+                android:paddingRight="100dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instructionsForg" />
+
+            <Button
+                android:id="@+id/confirmForg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="SEND"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailForg" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

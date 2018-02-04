@@ -5,78 +5,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.example.postopgo.Doc_Screen">
+    tools:context="com.hasan.postopgo.Doc_Screen">
 
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:fillViewport="false">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:paddingHorizontal="85dp"
-        android:singleLine="false"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Login"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="214dp"
+                android:layout_height="163dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/poglogo" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="214dp"
-        android:layout_height="163dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo" />
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:hint="Email"
+                android:textColorHint="@color/colorPrimary"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:singleLine="false"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <TextView
-        android:id="@+id/ForgotLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Forgot your password? Click Here"
-        android:onClick="toForgot"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Login" />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="Password"
+                android:textColorHint="@color/colorPrimary"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
 
-    <TextView
-        android:id="@+id/RegisterLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:onClick="toRegister"
-        android:text="Register Here"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ForgotLink" />
+            <Button
+                android:id="@+id/Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Login"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
+
+            <TextView
+                android:id="@+id/ForgotLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Forgot your password? Click Here"
+                android:onClick="toForgot"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Login" />
+
+            <TextView
+                android:id="@+id/RegisterLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="toRegister"
+                android:text="Register Here"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ForgotLink" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

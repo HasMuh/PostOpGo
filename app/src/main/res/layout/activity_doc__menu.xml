@@ -5,77 +5,102 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.example.postopgo.Doc_Menu">
+    tools:context="com.hasan.postopgo.Doc_Menu">
 
-    <TextView
-        android:id="@+id/titleDocMenu"
-        android:layout_width="wrap_content"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:textColor="@color/colorPrimary"
-        android:textSize="32dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:fillViewport="false">
 
-    <Button
-        android:id="@+id/NewOp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:paddingBottom="50dp"
-        android:paddingTop="50dp"
-        android:text="New Operation"
-        android:onClick="toNewOp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleDocMenu" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/titleDocMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/ManOp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:paddingBottom="44dp"
-        android:paddingLeft="23dp"
-        android:paddingRight="23dp"
-        android:paddingTop="41dp"
-        android:text="Manage\nOperations"
-        android:onClick="toManageOps"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.326"
-        app:layout_constraintStart_toEndOf="@+id/NewOp"
-        app:layout_constraintTop_toBottomOf="@+id/titleDocMenu" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/PersInf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:paddingBottom="51dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingTop="51dp"
-        android:text="Personal Info"
-        android:onClick="toPhysInf"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NewOp" />
+                <Button
+                    android:id="@+id/NewOp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="72dp"
+                    android:layout_marginBottom="30dp"
+                    android:paddingBottom="50dp"
+                    android:paddingTop="50dp"
+                    android:text="New Operation"
+                    android:onClick="toNewOp" />
 
-    <Button
-        android:id="@+id/SettingPhys"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:paddingBottom="50dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:paddingTop="50dp"
-        android:text="Settings"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toEndOf="@+id/PersInf"
-        app:layout_constraintTop_toBottomOf="@+id/ManOp" />
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/ManOp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="72dp"
+                    android:layout_marginBottom="30dp"
+                    android:paddingBottom="44dp"
+                    android:paddingLeft="23dp"
+                    android:paddingRight="23dp"
+                    android:paddingTop="41dp"
+                    android:text="Manage\nOperations"
+                    android:onClick="toManageOps" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/PersInf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="51dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="51dp"
+                    android:text="Personal Info"
+                    android:onClick="toPhysInf" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/SettingPhys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="51dp"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:paddingTop="51dp"
+                    android:text="Settings"
+                    android:onClick="toSettings" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

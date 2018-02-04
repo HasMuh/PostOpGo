@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.example.postopgo.ManageOpDisamb">
+    tools:context="com.hasan.postopgo.ManageOpDisamb">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -97,12 +97,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/ManageThisMeds" />
 
             <Button
-                android:id="@+id/ManageThisPostOp"
+                android:id="@+id/ManageThisPreOp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Post-Op Care"
-                android:onClick="PostOpPicked"
+                android:text="Pre-Op Care"
+                android:onClick="PreOpPicked"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
@@ -110,6 +110,15 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ManageThisRest" />
+            <Button
+                android:id="@+id/Return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Return to main menu"
+                android:onClick="back"
+                android:textSize="22sp"/>
+
         </LinearLayout>
-    </ScrollView>>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

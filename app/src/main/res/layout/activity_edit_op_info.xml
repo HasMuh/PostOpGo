@@ -5,47 +5,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.example.postopgo.EditOpInfo">
+    tools:context="com.hasan.postopgo.EditOpInfo">
 
-    <TextView
-        android:id="@+id/EditThisTitle"
-        android:layout_width="wrap_content"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        android:textColor="@color/colorPrimary"
-        android:textSize="22sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:fillViewport="false">
 
-    <EditText
-        android:id="@+id/EditThisEntry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:fillViewport="true"
-        android:hint="\tEnter advice here"
-        android:inputType="text|textMultiLine"
-        android:lines="13"
-        android:maxLines="500"
-        android:scrollbars="vertical"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditThisTitle" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/EditThisTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/ConfEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Confirm Changes"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditThisEntry" />
+            <EditText
+                android:id="@+id/EditThisEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:fillViewport="true"
+                android:hint="\tEnter advice here"
+                android:textColorHint="@color/colorPrimary"
+                android:inputType="text|textMultiLine"
+                android:lines="13"
+                android:maxLines="500"
+                android:scrollbars="vertical"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EditThisTitle" />
+
+            <Button
+                android:id="@+id/ConfEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Confirm Changes"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EditThisEntry" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

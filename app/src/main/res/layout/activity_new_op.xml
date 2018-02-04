@@ -5,79 +5,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.example.postopgo.NewOp">
+    tools:context="com.hasan.postopgo.NewOp">
 
-    <TextView
-        android:id="@+id/NewOpTitle"
-        android:layout_width="wrap_content"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="New Operation"
-        android:textColor="@color/colorPrimary"
-        android:textSize="32sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:fillViewport="false">
 
-    <TextView
-        android:id="@+id/NewOpNameExp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Enter operation name:"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NewOpTitle" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/NewOpTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="New Operation"
+                android:textColor="@color/colorPrimary"
+                android:textSize="32sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/NewOpName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Operation Name"
-        android:inputType="textPersonName"
-        android:singleLine="true"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NewOpNameExp" />
+            <TextView
+                android:id="@+id/NewOpNameExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Enter operation name:"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NewOpTitle" />
 
-    <TextView
-        android:id="@+id/NewOpPwExp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Enter 8-digit passcode for patients:"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NewOpName" />
+            <EditText
+                android:id="@+id/NewOpName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Operation Name"
+                android:textColorHint="@color/colorPrimary"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NewOpNameExp" />
 
-    <EditText
-        android:id="@+id/NewOpPw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Passcode"
-        android:inputType="number"
-        android:singleLine="true"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NewOpPwExp" />
+            <TextView
+                android:id="@+id/NewOpPwExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Enter passcode for patients:"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NewOpName" />
 
-    <Button
-        android:id="@+id/ConfNewOp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Create Operation"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NewOpPw" />
+            <EditText
+                android:id="@+id/NewOpPw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Passcode"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NewOpPwExp" />
+
+            <Button
+                android:id="@+id/ConfNewOp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Create Operation"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NewOpPw" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

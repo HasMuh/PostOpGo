@@ -5,55 +5,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.example.postopgo.ManageOps">
+    tools:context="com.hasan.postopgo.ManageOps">
 
-    <TextView
-        android:id="@+id/ManageOpTitle"
-        android:layout_width="wrap_content"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Manage Operations"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:fillViewport="false">
 
-    <TextView
-        android:id="@+id/ManageOpExp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Enter operation name:"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManageOpTitle" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/ManageOpTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Manage Operations"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/ManageOpEntry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="Operation name"
-        android:inputType="text"
-        android:singleLine="true"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManageOpExp" />
+            <TextView
+                android:id="@+id/ManageOpExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Enter operation name:"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ManageOpTitle" />
 
-    <Button
-        android:id="@+id/ConfManageOps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Open Operation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManageOpEntry" />
+            <EditText
+                android:id="@+id/ManageOpEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:ems="10"
+                android:hint="Operation name"
+                android:textColorHint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"
+                android:inputType="text"
+                android:singleLine="true"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ManageOpExp" />
+
+            <Button
+                android:id="@+id/ConfManageOps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Open Operation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ManageOpEntry" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

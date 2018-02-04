@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.postopgo">
+    package="com.hasan.postopgo">
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <supports-screens android:compatibleWidthLimitDp="320" />
 
     <application
@@ -14,7 +16,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Welcome_Screen"
             android:parentActivityName=".IAmA"
@@ -61,14 +63,16 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ManageOpDisamb"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ManageOps"/>
         <activity
             android:name=".EditOpInfo"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Advice"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".Contact"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".Contact" />
+        <activity android:name=".Settings"></activity>
     </application>
 
 </manifest>

@@ -58,6 +58,54 @@
             android:textColor="@android:color/black"
             android:textSize="36sp"
             style="?android:attr/borderlessButtonStyle"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="IMPORTANT: The information contained in PostOpGo cannot substitute for the advice of a qualified and licensed physician or other health care provider such as a pharmacist. The information provided in PostOpGo is for purposes that are purely informational. This mobile app's platform may not cover all possible drug interactions or all aspects of post-operative care after a specific procedure or surgery. Please check with your physician if you have health questions or concerns that are not addressed ​or are unclear ​within PostOpGo about proper post-operative care​. PostOpGo does not take any responsibility for any medical damages incurred as a result of misusing the information contained within it."/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Privacy Policy"
+                android:textColor="@color/colorPrimary"
+                android:onClick="toPrivacy"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Disclaimer"
+                android:textColor="@color/colorPrimary"
+                android:onClick="toDisclaimer"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="EULA"
+                android:textColor="@color/colorPrimary"
+                android:onClick="toEULA"/>
+
+
+
+        </LinearLayout>
     </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

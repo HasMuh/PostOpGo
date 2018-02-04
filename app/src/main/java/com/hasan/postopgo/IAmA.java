@@ -24,4 +24,25 @@ public class IAmA extends AppCompatActivity {
         Intent intent = new Intent(this, Doc_Screen.class);
         startActivity(intent);
     }
+
+    public void toPrivacy(View view)
+    {
+        Intent intent = new Intent(this, Legal.class);
+        intent.putExtra("DocType", "Privacy Policy");
+        startActivity(intent);
+    }
+
+    public void toDisclaimer(View view)
+    {
+        Intent intent = new Intent(this, Legal.class);
+        intent.putExtra("DocType", "Disclaimer");
+        startActivity(intent);
+    }
+
+    public void toEULA(View view)
+    {
+        Intent intent = new Intent(this, Legal.class);
+        intent.putExtra("DocType", "EULA");
+        startActivity(intent);
+    }
 }

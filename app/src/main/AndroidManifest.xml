@@ -63,16 +63,17 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ManageOpDisamb"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".ManageOps"/>
+            android:parentActivityName=".ManageOps"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".EditOpInfo"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Advice"
             android:screenOrientation="portrait" />
         <activity android:name=".Contact" />
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".Legal"></activity>
     </application>
 
 </manifest>

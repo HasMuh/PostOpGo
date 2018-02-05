@@ -17,8 +17,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="@drawable/separator"
-        android:showDividers="middle|end"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -33,6 +31,11 @@
             android:textColor="@color/colorPrimary"
             android:textSize="24sp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
         <Button
             android:id="@+id/Patient"
             android:layout_width="wrap_content"
@@ -46,7 +49,10 @@
             android:textSize="36sp"
             style="?android:attr/borderlessButtonStyle"/>
 
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="148dp"
+                android:background="@android:color/darker_gray" />
 
         <Button
             android:id="@+id/Doctor"
@@ -59,6 +65,8 @@
             android:textSize="36sp"
             style="?android:attr/borderlessButtonStyle"/>
 
+        </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="20dp"
@@ -68,6 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
+            android:textSize="10sp"
             android:text="IMPORTANT: The information contained in PostOpGo cannot substitute for the advice of a qualified and licensed physician or other health care provider such as a pharmacist. The information provided in PostOpGo is for purposes that are purely informational. This mobile app's platform may not cover all possible drug interactions or all aspects of post-operative care after a specific procedure or surgery. Please check with your physician if you have health questions or concerns that are not addressed ​or are unclear ​within PostOpGo about proper post-operative care​. PostOpGo does not take any responsibility for any medical damages incurred as a result of misusing the information contained within it."/>
         <View
             android:layout_width="match_parent"
